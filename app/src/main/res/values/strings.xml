@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Care Location</string>
+    <string name="centerTitle">ServiceCenter</string>
+    <string name="num_address"><![CDATA[ContactNo&Address]]></string>
+    <string name="tel">Tel:</string>
+    <string name="address">Address:</string>
+</resources>
