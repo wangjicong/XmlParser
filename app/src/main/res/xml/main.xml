@@ -3,6 +3,17 @@
     <Preference
         android:key="sax"
         android:title="sax">
-        <intent android:action="com.demo.sax"/>
+        <intent android:action="com.demo.sax" />
+    </Preference>
+
+    <Preference
+        android:key="dom"
+        android:title="dom">
+        <intent android:action="com.demo.dom" />
+    </Preference>
+    <Preference
+        android:key="pull"
+        android:title="pull">
+        <intent android:action="com.demo.pull"/>
     </Preference>
 </PreferenceScreen>

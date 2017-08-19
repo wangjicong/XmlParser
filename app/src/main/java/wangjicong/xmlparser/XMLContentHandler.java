@@ -32,7 +32,7 @@ public class XMLContentHandler extends DefaultHandler {
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         super.startElement(uri, localName, qName, attributes);
-        // Log.d(TAG,"local name is "+localName + " qName is "+qName);
+
         if (localName.equals(Center.CENTER)) {
             mCurrent = new Center();
         }
@@ -49,13 +49,10 @@ public class XMLContentHandler extends DefaultHandler {
             }
             if (tagName.equals(Center.NAME)) {
                 mCurrent.setName(data);
-                //Log.d(TAG,"NAME IS "+data);
             } else if (tagName.equals(Center.NUMBERS)) {
                 mCurrent.setNumbers(data);
-                //Log.d(TAG,"NUMBERS IS "+data);
             } else if (tagName.equals(Center.ADDRESS)) {
                 mCurrent.setAddress(data);
-                // Log.d(TAG,"ADDRESS IS "+data);
             }
         }
     }
@@ -65,7 +62,6 @@ public class XMLContentHandler extends DefaultHandler {
         super.endElement(uri, localName, qName);
         if (localName.equals(Center.CENTER)) {
             mDate.add(mCurrent);
-            //Log.d(TAG,"name : "+mCurrent.getName()+" numbers : "+mCurrent.getNumbers() +" address : "+mCurrent.getAddress());
             mCurrent = null;
         }
         tagName = null;
